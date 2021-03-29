@@ -5,17 +5,23 @@
             <title-bar/>
           </div>
 
-            <section class="hero is-fullheight is-info">
-                <div class="columns">
+            <section class="hero is-large is-info">
+                <div class="columns is-mobile">
                     <div v-for="card in cards" :key="card" class="column">
-                        <card/>
+                        <a><card/></a>
                     </div>
                 </div>
-                <div class="columns">
+                <div class="columns is-mobile">
                     <div v-for="card in cards" :key="card" class="column">
-                        <card/>
+                        <a><card/></a>
                     </div>
                 </div>
+                <div>
+                    <modal/>
+                </div>
+
+
+
             </section>
     </div>
   </div>
@@ -23,6 +29,7 @@
 
 <script>
 import Card from '../components/Card.vue'
+import Modal from '../components/Modal.vue'
 import TitleBar from '../components/TitleBar.vue'
 
 
@@ -32,10 +39,9 @@ export default {
             "Card1",
             "Card2",
             "Card3",
-            "Card4"
         ]
     }),
-    components: { TitleBar, Card },
+    components: { TitleBar, Card, Modal },
 
 }
 </script>
@@ -44,6 +50,7 @@ export default {
 .hero{
     border-radius: 20px;
     margin-top: 10px;
+    width: 1000px;
 }
 .home{
     margin: auto;
