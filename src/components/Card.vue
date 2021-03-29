@@ -2,17 +2,19 @@
     <div class="card">
         <div class="card-content">
             <div class="content">
-                <p id="card-name" class="title is-3 has-text-centered">
-                    Affirmation Card
-                </p>
+                
             </div>
         </div>
     </div>
 </template>
 
 <script>
-export default {
+import FlipCard from 'vue-flip-card';
 
+export default {
+    components: {
+        FlipCard
+    }
 }
 </script>
 

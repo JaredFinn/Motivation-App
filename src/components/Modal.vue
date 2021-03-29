@@ -1,10 +1,10 @@
 <template>
-  <div class="modal is-active">
+  <div class="modal" :class="{ 'is-active': modalActive }">
     <div class="modal-background"></div>
         <div class="modal-card">
             <header class="modal-card-head">
                 <p class="modal-card-title">Modal title</p>
-                <button class="delete" aria-label="close"></button>
+                <button @click="$emit('modalInactive')" class="delete" aria-label="close"></button>
             </header>
             <section class="modal-card-body">
                 <!-- Content ... -->
@@ -19,7 +19,11 @@
 
 <script>
 export default {
-
+    data: () => ({
+    }),
+    props: {
+        modalActive: Boolean
+    }
 }
 </script>
 

@@ -4,24 +4,20 @@
           <div id="title-bar">
             <title-bar/>
           </div>
-
             <section class="hero is-large is-info">
                 <div class="columns is-mobile">
                     <div v-for="card in cards" :key="card" class="column">
-                        <a><card/></a>
+                        <a @click="clickActive"><card/></a>
                     </div>
                 </div>
                 <div class="columns is-mobile">
                     <div v-for="card in cards" :key="card" class="column">
-                        <a><card/></a>
+                        <a @click="clickActive"> <card/></a>
                     </div>
                 </div>
-                <div>
-                    <modal/>
-                </div>
 
-
-
+                <modal :modalActive="cardClicked" v-on:modalInactive="cardClicked = false"/>
+                
             </section>
     </div>
   </div>
@@ -39,9 +35,15 @@ export default {
             "Card1",
             "Card2",
             "Card3",
-        ]
+        ],
+        cardClicked: false,
     }),
     components: { TitleBar, Card, Modal },
+    methods: {
+        clickActive(){
+            this.cardClicked = true;
+        },
+    }
 
 }
 </script>
