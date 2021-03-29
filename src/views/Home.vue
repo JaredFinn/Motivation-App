@@ -37,14 +37,14 @@ export default {
     border-radius: 20px;
     margin-top: 10px;
     width: 1000px;
+    margin: auto;
 }
 .home{
     margin: auto;
     margin: 10px;
 }
 #title-bar{
-    margin-top: 10px;
-    margin-left: 20px;
+    
 }
 
 </style>

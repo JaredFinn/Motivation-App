@@ -3,13 +3,15 @@
         <ul class="flashcard-list">
             <li v-on:click="toggleCard(card)" v-for="card in cards" :key="card">
                 <transition name="flip">
-                <p v-bind:key="card.flipped" class="card">
-                    {{ card.flipped ? card.back : card.front }}
-                </p>
+                    <div class="content">
+                        <p v-bind:key="card.flipped" class="card is-size-6">
+                            {{ card.flipped ? card.back.quote : card.front.someArt }}
+                        </p>
+                </div>
                 </transition>
             </li>
             <div>
-                <modal :modalActive="cardClicked" v-on:modalInactive="toggleCard(currentCard)"/>
+                <modal :modalActive="cardClicked" v-on:modalInactive="toggleCard(currentCard)" :currentModal="currentCard"/>
             </div>
         </ul>
     </div>
@@ -22,34 +24,63 @@ export default {
     data: () => ({
         cards: [
             {
-                front: 'The "First Computer Programmer"',
-                back: 'Ada Lovelace',
+                front: {
+                    someArt: "Some Art Perhaps"
+                },
+                back: {
+                    quote: '"Attitude is a choice. Happiness is a choice. Optimism is a choice. Kindness is a choice. Giving is a choice. Respect is a choice. Whatever choice you make makes you. Choose wisely."',
+                    author: "Roy T. Bennett"
+                },
                 flipped: false,
             },
             {
-                front: 'Invented the "Clarke Calculator"',
-                back: 'Edith Clarke',
-                flipped: false,
-        
-            },
-            {
-                front: 'Famous World War II Enigma code breaker',
-                back: 'Alan Turing',
-                flipped: false,
-            },
-            {
-                front: 'Created satellite orbit analyzation software for NASA',
-                back: 'Dr. Evelyn Boyd Granville',
+                front: {
+                    someArt: "Some Art Perhaps"
+                },
+                back: {
+                    quote: '"Don\'t be pushed around by the fears in your mind. Be led by the dreams in your heart."',
+                    author: "Roy T. Bennett"
+                },
                 flipped: false,
             },
             {
-                front: 'Created satellite orbit analyzation software for NASA',
-                back: 'Dr. Evelyn Boyd Granville',
+                front: {
+                    someArt: "Some Art Perhaps"
+                },
+                back: {
+                    quote: '"Instead of worrying about what you cannot control, shift your energy to what you can create."',
+                    author: "Roy T. Bennett"
+                },
                 flipped: false,
             },
             {
-                front: 'Created satellite orbit analyzation software for NASA',
-                back: 'Dr. Evelyn Boyd Granville',
+                front: {
+                    someArt: "Some Art Perhaps"
+                },
+                back: {
+                    quote: '"Take responsibility of your own happiness, never put it in other people’s hands."',
+                    author: "Roy T. Bennett"
+                },
+                flipped: false,
+            },
+            {
+                front: {
+                    someArt: "Some Art Perhaps"
+                },
+                back: {
+                    quote: '"It’s only after you’ve stepped outside your comfort zone that you begin to change, grow, and transform."',
+                    author: "Roy T. Bennett"
+                },
+                flipped: false,
+            },
+            {
+                front: {
+                    someArt: "Some Art Perhaps"
+                },
+                back: {
+                    quote: '"More smiling, less worrying. More compassion, less judgment. More blessed, less stressed. More love, less hate."',
+                    author: "Roy T. Bennett"
+                },
                 flipped: false,
             },
         ],
@@ -116,7 +147,7 @@ body {
   
   .card {
     display: block;
-    width: 250px;
+    width: 273px;
     height: 350px;
     margin: 30px;
     padding: 80px 50px;
