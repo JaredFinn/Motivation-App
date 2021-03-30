@@ -11,7 +11,7 @@
                 </transition>
             </li>
             <div>
-                <modal :modalActive="cardClicked" v-on:modalInactive="toggleCard(currentCard)" :currentModal="currentCard" />
+                <modal :modalActive="cardClicked" v-on:modalInactive="toggleCard(currentCard)" :currentModal="currentCard" @changeFavoriteStatus="changeFavorite" />
             </div>
         </ul>
     </div>
@@ -29,7 +29,8 @@ export default {
                 },
                 back: {
                     quote: '"Attitude is a choice. Happiness is a choice. Optimism is a choice. Kindness is a choice. Giving is a choice. Respect is a choice. Whatever choice you make makes you. Choose wisely."',
-                    author: "Roy T. Bennett"
+                    author: "Roy T. Bennett",
+                    favorite: false,
                 },
                 flipped: false,
             },
@@ -39,7 +40,8 @@ export default {
                 },
                 back: {
                     quote: '"Don\'t be pushed around by the fears in your mind. Be led by the dreams in your heart."',
-                    author: "Roy T. Bennett"
+                    author: "Roy T. Bennett",
+                    favorite: false,
                 },
                 flipped: false,
             },
@@ -49,7 +51,8 @@ export default {
                 },
                 back: {
                     quote: '"Instead of worrying about what you cannot control, shift your energy to what you can create."',
-                    author: "Roy T. Bennett"
+                    author: "Roy T. Bennett",
+                    favorite: false,
                 },
                 flipped: false,
             },
@@ -59,7 +62,8 @@ export default {
                 },
                 back: {
                     quote: '"Take responsibility of your own happiness, never put it in other people’s hands."',
-                    author: "Roy T. Bennett"
+                    author: "Roy T. Bennett",
+                    favorite: false,
                 },
                 flipped: false,
             },
@@ -69,7 +73,8 @@ export default {
                 },
                 back: {
                     quote: '"It’s only after you’ve stepped outside your comfort zone that you begin to change, grow, and transform."',
-                    author: "Roy T. Bennett"
+                    author: "Roy T. Bennett",
+                    favorite: false,
                 },
                 flipped: false,
             },
@@ -79,7 +84,8 @@ export default {
                 },
                 back: {
                     quote: '"More smiling, less worrying. More compassion, less judgment. More blessed, less stressed. More love, less hate."',
-                    author: "Roy T. Bennett"
+                    author: "Roy T. Bennett",
+                    favorite: false,
                 },
                 flipped: false,
             },
@@ -112,6 +118,9 @@ export default {
         this.error= false;
       }
     },
+    changeFavorite(currentCardStatus){
+      this.currentCard.back.favorite = currentCardStatus
+    }
   },
   props: {
         modalActive: Boolean
@@ -171,15 +180,15 @@ body {
   }
   
   li:nth-child(-n+3) .card{
-    background-color: #e65f51;
+    background-color: #fff;
     }
   
   li:nth-child(2n+1) .card{
-    background-color: #a17de9;
+    background-color: #51aae5;
     }
   
   li:nth-child(4n) .card{
-    background-color: #feca34;
+    background-color: #51aae5;
     }
   
   li:nth-child(5n-2) .card{
@@ -187,7 +196,7 @@ body {
     }
   
   li:nth-child(4n+4) .card{
-    background-color: #feca34;
+    background-color: #fff;
     }
   
   li:nth-child(-7n+7) .card{

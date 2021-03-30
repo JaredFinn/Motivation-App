@@ -3,17 +3,21 @@
     <div class="modal-background"></div>
         <div class="modal-card">
             <header class="modal-card-head">
-                <p class="modal-card-title">Hello</p>
+                
+                
+                <p class="modal-card-title">
+                    <button @click="favoriteSwitch" class="button" :class="{ 'is-success': currentModal.back.favorite }">Is this your favorite today?</button>
+                </p>
                 <button @click="$emit('modalInactive')" class="delete" aria-label="close"></button>
             </header>
             <section class="modal-card-body">
                 <div class="content">
-                    <h1>Hello</h1>
+                    <p>{{ currentModal.back.quote }}</p>
+                    <strong>- {{ currentModal.back.author }}</strong>
                 </div>
             </section>
             <footer class="modal-card-foot">
-                <button class="button is-success">Save changes</button>
-                <button class="button">Cancel</button>
+                
             </footer>
         </div>
     </div>
@@ -25,9 +29,14 @@ export default {
 
     }),
     props: {
-        cards: Array,
         modalActive: Boolean,
-        currentModal: Number,
+        currentModal: Object,
+    },
+    methods:{
+        favoriteSwitch(){
+            this.currentModal.back.favorite = !this.currentModal.back.favorite,
+            this.$emit('changeFavoriteStatus', this.currentModal.back.favorite)
+        }
     }
 }
 </script>

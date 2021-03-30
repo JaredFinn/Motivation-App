@@ -4,28 +4,20 @@
           <div id="title-bar">
             <title-bar/>
           </div>
-
-            <section class="hero is-large ">
-                <div class="columns is-mobile">
-                    <div class="column">
-                        <card/>
-                    </div>
-                </div>
-            </section>
     </div>
   </div>
 </template>
 
 <script>
-import Card from '../components/Card.vue'
-import TitleBar from '../components/TitleBar.vue'
 
 
 export default {
     data: () => ({
 
     }),
-    components: { TitleBar, Card },
+    components: { 
+
+     },
     methods: {
 
     }
