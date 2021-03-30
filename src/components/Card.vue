@@ -7,11 +7,11 @@
                         <p v-bind:key="card.flipped" class="card is-size-6">
                             {{ card.flipped ? card.back.quote : card.front.someArt }}
                         </p>
-                </div>
+                    </div>
                 </transition>
             </li>
             <div>
-                <modal :modalActive="cardClicked" v-on:modalInactive="toggleCard(currentCard)" :currentModal="currentCard"/>
+                <modal :modalActive="cardClicked" v-on:modalInactive="toggleCard(currentCard)" :currentModal="currentCard" />
             </div>
         </ul>
     </div>
@@ -91,12 +91,12 @@ export default {
         currentCard: null,
     }),
   methods: {
-    toggleCard: function(card) {
+    toggleCard(card){
       card.flipped = !card.flipped;
       this.cardClicked = !this.cardClicked;
       this.currentCard = card;
     },
-    addNew: function() {
+    addNew() {
       if(!this.newFront || !this.newBack) {
         this.error = true;
       } else {
@@ -152,7 +152,7 @@ body {
     margin: 30px;
     padding: 80px 50px;
     background-color: #51aae5;
-    border-radius: 7px;
+    border-radius: 15px;
     text-align: center;
     line-height: 27px;
     cursor: pointer;
@@ -216,7 +216,7 @@ body {
     display: none;
   }
   
-  .flip-enter, .flip-leave {
+  .flip-enter .flip-leave {
     transform: rotateY(180deg);
     opacity: 0;
   
