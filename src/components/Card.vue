@@ -156,7 +156,7 @@ body {
   
   .card {
     display: block;
-    width: 270px;
+    width: 250px;
     height: 350px;
     margin: 30px;
     padding: 80px 50px;
