@@ -72,7 +72,7 @@ export default {
                     someArt: "Some Art Perhaps"
                 },
                 back: {
-                    quote: '"It’s only after you’ve stepped outside your comfort zone that you begin to change, grow, and transform."',
+                    quote: '"More smiling, less worrying. More compassion, less judgment. More blessed, less stressed. More love, less hate."',
                     author: "Roy T. Bennett",
                     favorite: false,
                 },
@@ -83,12 +83,13 @@ export default {
                     someArt: "Some Art Perhaps"
                 },
                 back: {
-                    quote: '"More smiling, less worrying. More compassion, less judgment. More blessed, less stressed. More love, less hate."',
+                    quote: '"It’s only after you’ve stepped outside your comfort zone that you begin to change, grow, and transform."',
                     author: "Roy T. Bennett",
                     favorite: false,
                 },
                 flipped: false,
             },
+            
         ],
         newFront: '',
         newBack: '',
@@ -160,13 +161,11 @@ body {
     height: 350px;
     margin: 30px;
     padding: 80px 50px;
-    background-color: #51aae5;
     border-radius: 15px;
     text-align: center;
     line-height: 27px;
     cursor: pointer;
     position: relative;
-    color: #fff;
     font-weight: 600;
     font-size: 20px;
     -webkit-box-shadow: 9px 10px 22px -8px rgba(209,193,209,.5);
@@ -180,27 +179,27 @@ body {
   }
   
   li:nth-child(-n+3) .card{
-    background-color: #fff;
+    background-color: rgba(175, 250, 255, 0.842);
     }
   
   li:nth-child(2n+1) .card{
-    background-color: #51aae5;
+    background-color: rgba(175, 250, 255, 0.842);
     }
   
-  li:nth-child(4n) .card{
-    background-color: #51aae5;
+  li:nth-child(4n+2) .card{
+    background-color: rgba(175, 250, 255, 0.842);
     }
   
   li:nth-child(5n-2) .card{
-    background-color: #51aae5;
+    background-color: rgba(175, 250, 255, 0.842);
     }
   
   li:nth-child(4n+4) .card{
-    background-color: #fff;
+    background-color: rgba(175, 250, 255, 0.842);
     }
   
   li:nth-child(-7n+7) .card{
-    background-color: #e46055;
+    background-color: rgba(175, 250, 255, 0.842);
     }
   
   .delete-card {

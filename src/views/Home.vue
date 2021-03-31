@@ -38,7 +38,7 @@ export default {
     margin-top: 10px;
     width: 1000px;
     margin: auto;
-    background-color: rgba(0, 201, 77, 0.452);
+    background-image: linear-gradient(30deg, rgb(29, 127, 238), rgb(198, 255, 172));
 }
 .home{
     margin: auto;
