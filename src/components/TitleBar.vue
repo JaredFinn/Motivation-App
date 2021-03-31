@@ -27,9 +27,6 @@ export default {
 }
 .roll-text{
   margin: auto;
-  text-align: center;
 }
-.t{
-  text-align: center;
-}
+
 </style>
