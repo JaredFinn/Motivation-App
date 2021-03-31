@@ -23,6 +23,10 @@ export default {
 .bday{
     padding-top: 200px;
     margin: auto;
+    text-align: center;
+}
+.t{
+    text-align: center;
 }
 #cake{
     color: rgb(97, 179, 255);
