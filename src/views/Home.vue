@@ -46,6 +46,7 @@ export default {
 }
 #title-bar{
     margin-bottom: 20px;
+    padding-left: 50px;
 }
 .direct{
     margin: 15px;

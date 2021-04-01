@@ -24,7 +24,8 @@ export default {
 
 <style>
 .bday{
-    padding-top: 200px;
+    padding-top: 100px;
+    padding-left: 50px;
     margin: auto;
 }
 
