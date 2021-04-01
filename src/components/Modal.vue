@@ -15,6 +15,7 @@
                     <p>~</p>
                     <p>{{ currentModal.back.quote }}</p>
                     <strong>- {{ currentModal.back.author }}</strong>
+                    <img v-if="currentModal.front.pic2" :src="currentModal.front.pic2" alt="">
                 </div>
             </section>
             <footer class="modal-card-foot">

@@ -4,10 +4,12 @@
             <li v-on:click="toggleCard(card)" v-for="card in cards" :key="card">
                 <transition name="flip">
                     <div class="content">
+                        
                         <p v-bind:key="card.flipped" class="card is-size-6">
                             {{ card.flipped ? card.back.quote : card.front.someArt }}
                             <img class="image" :src="card.front.pic" alt="oops">
                         </p>
+                        <div  v-if="card.back.favorite"><i class="fas fa-heart"></i><p>Favorite</p></div>
                     </div>
                 </transition>
             </li>
@@ -26,6 +28,9 @@ import image4 from '../assets/Isabella4.jpg'
 import image6 from '../assets/Isabella6.jpg'
 import image7 from '../assets/Isabella7.jpg'
 import imageToe from '../assets/IsabellaToe.jpg'
+import image11 from '../assets/Isabella3.jpg'
+import image22 from '../assets/Isabellacat.jpg'
+import image44 from '../assets/Isabella5.jpg'
 
 export default {
     data: () => ({
@@ -33,10 +38,11 @@ export default {
             {
                 front: {
                     someArt: "Two wonderful souls",
-                    pic: image1
+                    pic: image1,
+                    pic2: image11
                },
                 back: {
-                    quote: '"Attitude is a choice. Happiness is a choice. Optimism is a choice. Kindness is a choice. Giving is a choice. Respect is a choice. Whatever choice you make makes you. Choose wisely."',
+                    quote: '"Keep Going. Your hardest times often lead to the greatest moments of your life. Keep going. Tough situations build strong people in the end."',
                     author: "Roy T. Bennett",
                     favorite: false,
                 },
@@ -45,7 +51,8 @@ export default {
             {
                 front: {
                     someArt: "Very Cute",
-                    pic: image2
+                    pic: image2,
+                    pic2: image22
                 },
                 back: {
                     quote: '"Don\'t be pushed around by the fears in your mind. Be led by the dreams in your heart."',
@@ -58,6 +65,7 @@ export default {
                 front: {
                     someArt: "Shred",
                     pic: image4,
+                    pic2: image44
                 },
                 back: {
                     quote: '"Instead of worrying about what you cannot control, shift your energy to what you can create."',

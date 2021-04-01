@@ -6,7 +6,7 @@
           </div>
 
             <section class="hero is-large ">
-                <p class="direct">Click on the cards and choose your favorite quote.</p>
+                <p class="direct">Click on the cards and you can choose your favorite quote. Some quality pics in there.</p>
                 <div class="columns">
                     <div class="column">
                         <card/>
@@ -48,7 +48,7 @@ export default {
     margin-bottom: 20px;
 }
 .direct{
-    margin: 5px;
+    margin: 15px;
 }
 
 </style>
