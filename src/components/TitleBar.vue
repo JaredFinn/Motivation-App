@@ -26,7 +26,7 @@ export default {
 #heart{
   color: rgb(247, 51, 142);
 }
-.roll-text{
+.title-bar{
   margin: auto;
 }
 
