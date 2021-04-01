@@ -12,6 +12,7 @@
             </header>
             <section class="modal-card-body">
                 <div class="content">
+                    <p>~</p>
                     <p>{{ currentModal.back.quote }}</p>
                     <strong>- {{ currentModal.back.author }}</strong>
                 </div>

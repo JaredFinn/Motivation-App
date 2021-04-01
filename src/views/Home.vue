@@ -6,7 +6,8 @@
           </div>
 
             <section class="hero is-large ">
-                <div class="columns is-mobile">
+                <p class="direct">Click on the cards and choose your favorite quote.</p>
+                <div class="columns">
                     <div class="column">
                         <card/>
                     </div>
@@ -36,16 +37,18 @@ export default {
 .hero{
     border-radius: 20px;
     margin-top: 10px;
-    width: 1000px;
+    width: 310px;
     margin: auto;
     background-image: linear-gradient(30deg, rgb(29, 127, 238), rgb(198, 255, 172));
 }
 .home{
-    margin: auto;
-    margin: 10px;
+
 }
 #title-bar{
     margin-bottom: 20px;
+}
+.direct{
+    margin: 5px;
 }
 
 </style>

@@ -6,6 +6,7 @@
                     <div class="content">
                         <p v-bind:key="card.flipped" class="card is-size-6">
                             {{ card.flipped ? card.back.quote : card.front.someArt }}
+                            <img class="image" :src="card.front.pic" alt="oops">
                         </p>
                     </div>
                 </transition>
@@ -19,14 +20,21 @@
 
 <script>
 import Modal from '../components/Modal.vue'
+import image1 from '../assets/Isabella1.jpg'
+import image2 from '../assets/Isabella2.jpg'
+import image4 from '../assets/Isabella4.jpg'
+import image6 from '../assets/Isabella6.jpg'
+import image7 from '../assets/Isabella7.jpg'
+import imageToe from '../assets/IsabellaToe.jpg'
 
 export default {
     data: () => ({
         cards: [
             {
                 front: {
-                    someArt: "Some Art Perhaps"
-                },
+                    someArt: "Two wonderful souls",
+                    pic: image1
+               },
                 back: {
                     quote: '"Attitude is a choice. Happiness is a choice. Optimism is a choice. Kindness is a choice. Giving is a choice. Respect is a choice. Whatever choice you make makes you. Choose wisely."',
                     author: "Roy T. Bennett",
@@ -36,7 +44,8 @@ export default {
             },
             {
                 front: {
-                    someArt: "Some Art Perhaps"
+                    someArt: "Very Cute",
+                    pic: image2
                 },
                 back: {
                     quote: '"Don\'t be pushed around by the fears in your mind. Be led by the dreams in your heart."',
@@ -47,7 +56,8 @@ export default {
             },
             {
                 front: {
-                    someArt: "Some Art Perhaps"
+                    someArt: "Shred",
+                    pic: image4,
                 },
                 back: {
                     quote: '"Instead of worrying about what you cannot control, shift your energy to what you can create."',
@@ -58,7 +68,8 @@ export default {
             },
             {
                 front: {
-                    someArt: "Some Art Perhaps"
+                    someArt: "Frands",
+                    pic: image6,
                 },
                 back: {
                     quote: '"Take responsibility of your own happiness, never put it in other people’s hands."',
@@ -69,7 +80,8 @@ export default {
             },
             {
                 front: {
-                    someArt: "Some Art Perhaps"
+                    someArt: "This is us",
+                    pic: image7,
                 },
                 back: {
                     quote: '"More smiling, less worrying. More compassion, less judgment. More blessed, less stressed. More love, less hate."',
@@ -80,7 +92,8 @@ export default {
             },
             {
                 front: {
-                    someArt: "Some Art Perhaps"
+                    someArt: "This is good",
+                    pic: imageToe,
                 },
                 back: {
                     quote: '"It’s only after you’ve stepped outside your comfort zone that you begin to change, grow, and transform."',
@@ -96,6 +109,13 @@ export default {
         error: false,
         cardClicked: false,
         currentCard: null,
+        image1: image1,
+        image2: image2,
+        image4: image4,
+        image6: image6,
+        image7: image7,
+        imageToe: imageToe,
+
     }),
   methods: {
     toggleCard(card){
@@ -150,6 +170,9 @@ body {
     transition: all 0.3s ease;
   }
   
+  .image{
+    border-radius: 10px;
+  }
   .container {
     max-width: 100%;
     padding: 2em;
