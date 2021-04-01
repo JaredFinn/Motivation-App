@@ -37,12 +37,9 @@ export default {
 .hero{
     border-radius: 20px;
     margin-top: 10px;
-    width: 310px;
+    width: 325px;
     margin: auto;
     background-image: linear-gradient(30deg, rgb(29, 127, 238), rgb(198, 255, 172));
-}
-.home{
-
 }
 #title-bar{
     margin-bottom: 20px;
