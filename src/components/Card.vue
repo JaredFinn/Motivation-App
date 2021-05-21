@@ -22,90 +22,83 @@
 
 <script>
 import Modal from '../components/Modal.vue'
-import image1 from '../assets/Isabella1.jpg'
-import image2 from '../assets/Isabella2.jpg'
-import image4 from '../assets/Isabella4.jpg'
-import image6 from '../assets/Isabella6.jpg'
-import image7 from '../assets/Isabella7.jpg'
-import imageToe from '../assets/IsabellaToe.jpg'
-import image11 from '../assets/Isabella3.jpg'
-import image22 from '../assets/Isabellacat.jpg'
-import image44 from '../assets/Isabella5.jpg'
-
+import image8 from '../assets/Isabella8.jpg'
+import image9 from '../assets/Isabella9.jpg'
+import image10 from '../assets/Isabella10.jpg'
+import image11 from '../assets/Isabella11.jpg'
+import image12 from '../assets/Isabella12.jpg'
+import image13 from '../assets/Isabell13.jpg'
 export default {
     data: () => ({
         cards: [
             {
                 front: {
-                    someArt: "Two wonderful souls",
-                    pic: image1,
-                    pic2: image11
+                    someArt: "<3 Boston",
+                    pic: image8,
                },
                 back: {
-                    quote: '"Keep Going. Your hardest times often lead to the greatest moments of your life. Keep going. Tough situations build strong people in the end."',
-                    author: "Roy T. Bennett",
+                    quote: '"Learn to value yourself, which means: fight for your happiness."',
+                    author: "Ayn Rand",
                     favorite: false,
                 },
                 flipped: false,
             },
             {
                 front: {
-                    someArt: "Very Cute",
-                    pic: image2,
-                    pic2: image22
+                    someArt: "Adults",
+                    pic: image9,
                 },
                 back: {
-                    quote: '"Don\'t be pushed around by the fears in your mind. Be led by the dreams in your heart."',
-                    author: "Roy T. Bennett",
+                    quote: '"Happiness is a direction, not a place."',
+                    author: "Sydney J. Harris",
                     favorite: false,
                 },
                 flipped: false,
             },
             {
                 front: {
-                    someArt: "Shred",
-                    pic: image4,
-                    pic2: image44
+                    someArt: "uhhh",
+                    pic: image10,
                 },
                 back: {
-                    quote: '"Instead of worrying about what you cannot control, shift your energy to what you can create."',
-                    author: "Roy T. Bennett",
+                    quote: '"Put your thoughts to sleep. Do not let them cast a shadow over the moon of your heart. Let go of thinking."',
+                    author: "Rumi",
                     favorite: false,
                 },
                 flipped: false,
             },
             {
                 front: {
-                    someArt: "Frands",
-                    pic: image6,
+                    someArt: "interesting",
+                    pic: image11,
                 },
                 back: {
-                    quote: '"Take responsibility of your own happiness, never put it in other people’s hands."',
-                    author: "Roy T. Bennett",
+                    quote: '"Just when the caterpillar thought its world was over, it became a butterfly."',
+                    author: "-",
                     favorite: false,
                 },
                 flipped: false,
             },
             {
                 front: {
-                    someArt: "This is us",
-                    pic: image7,
+                    someArt: "BDAY Muhfucka",
+                    pic: image12,
                 },
                 back: {
-                    quote: '"More smiling, less worrying. More compassion, less judgment. More blessed, less stressed. More love, less hate."',
-                    author: "Roy T. Bennett",
+                    quote: '"The darkest nights produce the brightest stars."',
+                    author: "-",
                     favorite: false,
                 },
                 flipped: false,
             },
             {
                 front: {
-                    someArt: "This is good",
-                    pic: imageToe,
+                    someArt: "Fine Wine",
+                    pic: image13,
                 },
                 back: {
-                    quote: '"It’s only after you’ve stepped outside your comfort zone that you begin to change, grow, and transform."',
-                    author: "Roy T. Bennett",
+                    quote: '"You can’t stop the waves, but you can learn to swim."',
+                    author: "-",
                     favorite: false,
                 },
                 flipped: false,
@@ -117,12 +110,12 @@ export default {
         error: false,
         cardClicked: false,
         currentCard: null,
-        image1: image1,
-        image2: image2,
-        image4: image4,
-        image6: image6,
-        image7: image7,
-        imageToe: imageToe,
+        image8: image8,
+        image9: image9,
+        image10: image10,
+        image11: image11,
+        image12: image12,
+        image13: image13,
 
     }),
   methods: {

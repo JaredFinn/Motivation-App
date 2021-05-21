@@ -1,13 +1,10 @@
 <template>
   <div class="bday">
       <p id="t" class="title is-1 is-family-primary">
-            <Roller class="roll-text" text="Happy " transition="3" :charList="['','H', 'a', 'p', 'y', 'B', 'i', 't', 'r', 'h', 'd']" defaultChar=""/>
-            <Roller class="roll-text" text="Birthday" transition="3" :charList="['','H', 'a', 'p', 'y', 'B', 'i', 't', 'r', 'h', 'd']" defaultChar=""/>
-            <Roller class="roll-text" text="Isabella" transition="3" :charList="['', 'l', 'e', 'b', 'a', 's', 'I']" defaultChar=""/>
+            <Roller class="roll-text" text="You can do anything! " transition="3" :charList="['','Y', 'o', 'u', 'c', 'a', 'n', 'd', 'y', 't', 'h', 'i', 'g', '!']" defaultChar=""/>
             <router-link to="/home" class="dot--delayed">
-                <i id="cake" class="fas fa-birthday-cake"></i>
+                <i id="cake" class="fas fa-heart"></i>
             </router-link>
-            <Roller class="roll-text" text="21 Woo!" transition="3" :charList="['','!', '2', '1', 'W', 'o']" defaultChar=""/>
          </p>
   </div>
 </template>
